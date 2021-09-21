@@ -6,11 +6,11 @@ function App() {
   const [contagem, setContagem] = useState(0);
   
   useEffect(()=>{
-    document.title = "Comece a brincadeira";
-  }, []);
-  
-  useEffect(()=>{
-    document.title = "Contagem: "+contagem;
+    if(contagem == 0){
+      document.title = "Comece a brincadeira";
+    } else {
+      document.title = "Contagem: "+contagem;
+    }    
   }, [contagem]);
 
   function aumentarAction() {
