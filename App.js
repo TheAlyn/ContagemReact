@@ -4,6 +4,10 @@ import styled from 'styled-components';
 function App() {
 
   const [contagem, setContagem] = useState(0);
+  
+  useEffect(()=>{
+    document.title = "Contagem: "+contagem;
+  }, [contagem]);
 
   function aumentarAction() {
     setContagem(contagem +1)
