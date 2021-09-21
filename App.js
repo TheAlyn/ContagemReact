@@ -6,6 +6,10 @@ function App() {
   const [contagem, setContagem] = useState(0);
   
   useEffect(()=>{
+    document.title = "Comece a brincadeira";
+  }, []);
+  
+  useEffect(()=>{
     document.title = "Contagem: "+contagem;
   }, [contagem]);
 
